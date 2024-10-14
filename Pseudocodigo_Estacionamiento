@@ -1,0 +1,24 @@
+Algoritmo estacionamiento
+	Definir horas Como Entero
+    Definir costo, total Como Real
+    Definir opcion Como Caracter
+	
+    Escribir "Ingrese el número de horas que estuvo en el estacionamiento:"
+    Leer horas
+	
+    Si horas <= 10 Entonces
+        costo = horas * 15
+        Escribir "El costo total a pagar es: $", costo
+    Sino
+        Escribir "Ha excedido las 10 horas. ¿Desea adquirir una membresía? (S/N)"
+        Leer opcion
+		
+        Si opcion = "S" O opcion = "s" Entonces
+            total = 2000
+            Escribir "Ha elegido la membresía anual. El costo total es: $", total
+        Sino
+            costo = 10 * 15 + (horas - 10) * 15
+            Escribir "El costo total a pagar es: $", costo
+        Fin Si
+    Fin Si
+FinAlgoritmo
